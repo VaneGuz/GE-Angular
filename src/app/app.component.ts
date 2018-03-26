@@ -9,12 +9,12 @@ import { ConsultaBackService } from './consulta-back.service';
 export class AppComponent {
   title: string = '';
   constructor(private consultaBackService: ConsultaBackService) {
-    const obs = consultaBackService.consultarTittle();
-    obs.subscribe(
+    const obs = consultaBackService.consultarTittle().subscribe(
       res => {
         this.title = res;
-        console.log('Consulta exitosa http.post');
+        console.log('Consulta exitosa http.get');
       },
-      err => { console.log('Consulta fallida http.post'); });
+      err => { console.log('Consulta fallida http.post');
+    console.log(err); });
   }
 }
