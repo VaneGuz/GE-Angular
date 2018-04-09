@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ConsultaBackService } from './consulta-back.service';
-import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 
@@ -10,10 +8,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    BrowserModule
   ],
-  providers: [ConsultaBackService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
